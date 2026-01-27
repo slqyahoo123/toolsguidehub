@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Primary Meta Tags -->
+  <title>{{title}} | {{siteName}}</title>
+  <meta name="title" content="{{title}} | {{siteName}}">
+  <meta name="description" content="{{description}}">
+  <meta name="author" content="{{author}}">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="{{lang}}">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{canonicalUrl}}">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:image" content="{{ogImage}}">
+  <meta property="og:site_name" content="{{siteName}}">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{canonicalUrl}}">
+  <meta property="twitter:title" content="{{title}}">
+  <meta property="twitter:description" content="{{description}}">
+  <meta property="twitter:image" content="{{ogImage}}">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{canonicalUrl}}">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  
+  <!-- Critical CSS (内联) -->
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6;color:#333;background:#fff}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    header{background:#fff;border-bottom:1px solid #e5e5e5;padding:1rem 0;position:sticky;top:0;z-index:100}
+    header .container{display:flex;justify-content:space-between;align-items:center}
+    .logo{font-size:1.5rem;font-weight:700;color:#2563eb;text-decoration:none}
+    nav a{color:#666;text-decoration:none;margin-left:1.5rem;transition:color .2s}
+    nav a:hover{color:#2563eb}
+    main{min-height:calc(100vh - 200px);padding:2rem 0}
+    article{max-width:800px;margin:0 auto}
+    h1{font-size:2.5rem;margin-bottom:1rem;line-height:1.2;color:#1a1a1a}
+    h2{font-size:1.875rem;margin:2rem 0 1rem;color:#2d2d2d}
+    h3{font-size:1.5rem;margin:1.5rem 0 .75rem;color:#3d3d3d}
+    p{margin-bottom:1rem;font-size:1.0625rem}
+    ul,ol{margin:1rem 0;padding-left:2rem}
+    li{margin-bottom:.5rem}
+    a{color:#2563eb;text-decoration:none}
+    a:hover{text-decoration:underline}
+    code{background:#f5f5f5;padding:.2rem .4rem;border-radius:3px;font-size:.9em;font-family:Consolas,Monaco,monospace}
+    pre{background:#f5f5f5;padding:1rem;border-radius:5px;overflow-x:auto;margin:1rem 0}
+    pre code{background:none;padding:0}
+    .ad-container{text-align:center;margin:2rem 0;min-height:250px;display:flex;align-items:center;justify-content:center;background:#f9f9f9;border:1px solid #e5e5e5;border-radius:4px}
+    .ad-container.responsive{width:100%;max-width:728px;margin:2rem auto}
+    .ad-container.in-article{max-width:300px;margin:1.5rem auto}
+    footer{background:#f9f9f9;border-top:1px solid #e5e5e5;padding:2rem 0;margin-top:3rem;text-align:center;color:#666;font-size:.9rem}
+    footer a{color:#666}
+    @media(max-width:768px){h1{font-size:2rem}nav{display:none}.ad-container.responsive{max-width:100%}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">{{siteName}}</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/guides">Guides</a>
+        <a href="/tools">Tools</a>
+        <a href="/about">About</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <div class="container">
+      <article>
+        <h1>{{title}}</h1>
+        {{#if meta}}
+        <div style="color:#666;font-size:.9rem;margin-bottom:2rem">
+          {{#if meta.date}}<span>Published: {{meta.date}}</span>{{/if}}
+          {{#if meta.author}}<span style="margin-left:1rem">By: {{meta.author}}</span>{{/if}}
+        </div>
+        {{/if}}
+        
+        <!-- 顶部广告位 (AdSense) -->
+        <div class="ad-container responsive" id="ad-top">
+          <!-- AdSense广告代码将插入此处 -->
+        </div>
+        
+        <!-- 文章内容 -->
+        <div class="content">
+          {{body}}
+        </div>
+        
+        <!-- 文章内广告位 (AdSense) -->
+        <div class="ad-container in-article" id="ad-in-article">
+          <!-- AdSense广告代码将插入此处 -->
+        </div>
+        
+        <!-- 底部广告位 (AdSense) -->
+        <div class="ad-container responsive" id="ad-bottom">
+          <!-- AdSense广告代码将插入此处 -->
+        </div>
+      </article>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; {{currentYear}} {{siteName}}. All rights reserved.</p>
+      <p style="margin-top:.5rem">
+        <a href="/privacy">Privacy Policy</a> | 
+        <a href="/terms">Terms of Service</a>
+      </p>
+    </div>
+  </footer>
+  
+  <!-- AdSense脚本 (异步加载) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+  <script>
+    // AdSense初始化（仅在获得批准后启用）
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>
+

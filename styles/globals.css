@@ -1,0 +1,233 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* 更柔和的文字颜色 - 降低对比度，更舒适 */
+  --foreground-rgb: 30, 41, 59;
+  /* 更温暖的背景色 - 从纯白到非常浅的米色 */
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 250, 250, 249;
+  /* 页面背景 - 非常浅的暖灰色 */
+  --page-bg: 249, 250, 251;
+  /* 卡片背景 - 纯白 */
+  --card-bg: 255, 255, 255;
+  /* 边框颜色 - 更柔和的灰色 */
+  --border-color: 229, 231, 235;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 241, 245, 249;
+    --background-start-rgb: 15, 23, 42;
+    --background-end-rgb: 30, 41, 59;
+    --page-bg: 15, 23, 42;
+    --card-bg: 30, 41, 59;
+    --border-color: 51, 65, 85;
+  }
+}
+
+/* 
+ * 性能优化：
+ * - 使用系统字体栈（零加载时间）
+ * - 避免FOUT/FOIT
+ * - 最佳LCP性能
+ */
+body {
+  color: rgb(var(--foreground-rgb));
+  /* 更柔和的背景 - 纯色而非渐变，减少视觉噪音 */
+  background-color: rgb(var(--page-bg));
+  /* 使用系统字体栈，无需外部加载 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* 优化字体渲染 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  /* 更舒适的行高 */
+  line-height: 1.7;
+  /* 更柔和的文字颜色 */
+  color: rgb(55, 65, 81);
+}
+
+/* 主容器背景 */
+main {
+  background-color: rgb(var(--page-bg));
+}
+
+/* 
+ * CLS优化：
+ * - 预设图片容器尺寸
+ * - 避免布局偏移
+ */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 
+ * 性能优化：
+ * - 减少重绘和重排
+ * - 优化滚动性能
+ */
+* {
+  /* 使用transform和opacity进行动画（GPU加速） */
+  will-change: auto;
+}
+
+/* 平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* CLS优化：固定容器高度 */
+  .ad-container {
+    min-height: 250px;
+    contain: layout style paint;
+  }
+  
+  /* 渐变文字 - 更柔和的渐变 */
+  .gradient-text {
+    background: linear-gradient(135deg, #0c7cd6 0%, #14b8a6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* 卡片hover效果 - 更柔和的动画 */
+  .card-hover {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-2px); /* 减少位移，更柔和 */
+    box-shadow: 0 10px 25px -5px rgba(12, 124, 214, 0.15); /* 更柔和的阴影 */
+  }
+  
+  /* 淡入动画 */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* 滑下动画 */
+  .animate-slide-down {
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* 网格背景图案 - 更淡，几乎不可见 */
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(to right, rgba(0, 0, 0, 0.015) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  
+  /* 玻璃态效果 */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  /* 渐变边框 */
+  .gradient-border {
+    position: relative;
+    background: white;
+    border-radius: 12px;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 2px;
+    background: linear-gradient(135deg, #3b82f6, #0ea5e9, #8b5cf6);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+  
+  /* 阅读区域优化：适中的左右留白，避免过窄 */
+  .reading-content {
+    background-color: #fafafa;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .reading-content {
+      padding: 2rem;
+    }
+  }
+  
+  /* 更舒适的段落间距 */
+  .prose p + p {
+    margin-top: 1.5rem;
+  }
+  
+  /* 更舒适的列表间距 */
+  .prose ul > li,
+  .prose ol > li {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@layer components {
+  /* 让文章块与块之间更明显分隔，覆盖默认typography样式 */
+  .prose h2 {
+    margin-top: 4rem;   /* 64px */
+    margin-bottom: 2rem;/* 32px */
+  }
+
+  .prose h3 {
+    margin-top: 3rem;   /* 48px */
+    margin-bottom: 1.25rem; /* 20px */
+  }
+
+  .prose p {
+    margin-bottom: 1.75rem; /* 28px */
+  }
+
+  .prose ul,
+  .prose ol {
+    margin-top: 0.5rem;
+    margin-bottom: 1.75rem; /* 28px */
+  }
+
+  .prose li {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}

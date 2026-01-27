@@ -1,0 +1,177 @@
+Next.js 内容型SEO网站 - 完整文件夹树
+==========================================
+
+toolsguidehub/
+│
+├── app/                              # Next.js App Router (路由定义)
+│   ├── (marketing)/                  # 路由组：营销页面
+│   │   ├── about/
+│   │   │   └── page.tsx              # /about 页面
+│   │   ├── contact/
+│   │   │   └── page.tsx              # /contact 页面
+│   │   └── layout.tsx                # 营销页面布局
+│   │
+│   ├── [category]/                   # 动态路由：分类
+│   │   ├── page.tsx                  # 分类列表页 /[category]
+│   │   └── [slug]/
+│   │       └── page.tsx              # 文章详情页 /[category]/[slug]
+│   │
+│   ├── layout.tsx                    # 根布局（Header, Footer, AdSense）
+│   ├── page.tsx                      # 首页 /
+│   ├── sitemap.ts                    # 动态sitemap生成
+│   └── robots.ts                     # robots.txt生成
+│
+├── content/                          # Markdown内容源文件
+│   ├── articles/                     # 文章内容（按分类组织）
+│   │   ├── web-development/          # 分类：Web开发
+│   │   │   ├── getting-started-with-react.md
+│   │   │   ├── nextjs-best-practices.md
+│   │   │   └── ...                   # 更多文章
+│   │   │
+│   │   ├── tools/                    # 分类：工具
+│   │   │   ├── best-code-editors-2024.md
+│   │   │   └── ...
+│   │   │
+│   │   └── guides/                   # 分类：指南
+│   │       └── ...
+│   │
+│   └── pages/                        # 静态页面内容
+│       ├── about.md
+│       ├── privacy.md
+│       └── terms.md
+│
+├── lib/                              # 核心工具库（业务逻辑）
+│   ├── content/                      # 内容处理模块
+│   │   ├── loader.ts                # 内容加载器
+│   │   ├── parser.ts                # Markdown解析
+│   │   ├── metadata.ts              # 元数据提取
+│   │   └── index.ts                 # 统一导出
+│   │
+│   ├── utils/                        # 通用工具函数
+│   │   ├── slug.ts                  # URL slug生成
+│   │   ├── date.ts                  # 日期格式化
+│   │   └── links.ts                 # 内部链接处理
+│   │
+│   ├── seo/                          # SEO工具
+│   │   ├── metadata.ts               # 元数据生成
+│   │   ├── sitemap.ts                # Sitemap生成
+│   │   └── structured-data.ts        # JSON-LD结构化数据
+│   │
+│   └── adsense/                      # AdSense工具（未来）
+│       └── config.ts                 # AdSense配置
+│
+├── components/                       # React组件
+│   ├── ui/                           # 基础UI组件
+│   │   ├── button.tsx
+│   │   ├── link.tsx
+│   │   ├── card.tsx
+│   │   └── ...
+│   │
+│   ├── layout/                       # 布局组件
+│   │   ├── header.tsx                # 网站头部
+│   │   ├── footer.tsx                # 网站底部
+│   │   ├── navigation.tsx            # 导航菜单
+│   │   └── container.tsx            # 内容容器
+│   │
+│   ├── content/                      # 内容相关组件
+│   │   ├── article-header.tsx        # 文章头部
+│   │   ├── article-content.tsx       # 文章内容渲染
+│   │   ├── article-footer.tsx        # 文章底部
+│   │   ├── category-list.tsx         # 分类列表
+│   │   ├── related-articles.tsx      # 相关文章推荐
+│   │   └── table-of-contents.tsx     # 目录（可选）
+│   │
+│   └── adsense/                      # AdSense组件（未来）
+│       ├── ad-unit.tsx               # 广告单元
+│       └── ad-container.tsx           # 广告容器
+│
+├── config/                           # 配置文件
+│   ├── site.ts                       # 网站基础配置
+│   ├── categories.ts                 # 分类配置
+│   └── navigation.ts                 # 导航配置
+│
+├── public/                           # 静态资源（直接访问）
+│   ├── images/                       # 图片资源
+│   │   ├── articles/                 # 文章图片
+│   │   │   ├── web-development/      # 按分类组织
+│   │   │   └── tools/
+│   │   └── og/                       # Open Graph图片
+│   │
+│   ├── icons/                        # 网站图标
+│   │   ├── favicon.ico
+│   │   └── ...
+│   │
+│   └── assets/                       # 其他资源
+│
+├── styles/                           # 全局样式
+│   ├── globals.css                   # 全局样式
+│   └── markdown.css                  # Markdown内容样式
+│
+├── types/                            # TypeScript类型定义
+│   ├── content.ts                    # 内容类型
+│   ├── category.ts                   # 分类类型
+│   └── metadata.ts                   # 元数据类型
+│
+├── scripts/                          # 构建/维护脚本（可选）
+│   ├── validate-content.ts           # 内容验证
+│   └── generate-sitemap.ts          # Sitemap生成（备用）
+│
+├── next.config.js                    # Next.js配置
+├── tsconfig.json                     # TypeScript配置
+├── tailwind.config.js                # Tailwind配置（如使用）
+├── package.json
+└── README.md
+
+
+关键路径说明
+============
+
+路由映射：
+----------
+/                           → app/page.tsx (首页)
+/[category]                 → app/[category]/page.tsx (分类列表)
+/[category]/[slug]          → app/[category]/[slug]/page.tsx (文章详情)
+/about                      → app/(marketing)/about/page.tsx
+/contact                    → app/(marketing)/contact/page.tsx
+
+
+内容映射：
+----------
+content/articles/[category]/[slug].md
+    ↓
+lib/content/loader.ts (加载和解析)
+    ↓
+app/[category]/[slug]/page.tsx (渲染)
+
+
+URL示例：
+--------
+/web-development/nextjs-guide
+    ↓
+content/articles/web-development/nextjs-guide.md
+    ↓
+app/web-development/nextjs-guide (SSG生成)
+
+
+扩展性设计
+==========
+
+支持500+文章的策略：
+-------------------
+1. 按分类组织，每个分类文件夹管理相关文章
+2. 使用 generateStaticParams 分批生成
+3. 利用 Next.js 的增量静态生成 (ISR)
+4. CDN 缓存所有静态页面
+
+添加新分类：
+-----------
+1. 在 content/articles/ 创建新文件夹
+2. 在 config/categories.ts 添加配置
+3. 自动支持路由 /[new-category]
+
+添加新文章：
+-----------
+1. 在对应分类文件夹创建 .md 文件
+2. 运行构建，自动生成页面
+3. Sitemap 自动更新
+

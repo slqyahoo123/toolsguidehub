@@ -1,0 +1,131 @@
+# 项目文档
+
+本目录包含项目的所有技术文档和指南。
+
+## 📚 文档索引
+
+### 🚀 快速开始
+- [QUICKSTART.md](./QUICKSTART.md) - 快速启动指南
+- [SETUP.md](../SETUP.md) - 项目设置指南（根目录）
+- [README.md](../README.md) - 项目主文档（根目录）
+
+### 📝 文章发布
+- **[HOW_TO_PUBLISH_ARTICLES.md](./HOW_TO_PUBLISH_ARTICLES.md)** - 📖 **完整文章发布指南（必读）**
+- [ARTICLE_PUBLISHING_QUICK_START.md](./ARTICLE_PUBLISHING_QUICK_START.md) - 快速发布指南
+
+### 📖 项目结构
+- [PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md) - 详细的项目结构说明
+- [FOLDER_TREE.txt](./FOLDER_TREE.txt) - 文件夹树结构
+- [ARCHITECTURE.md](./ARCHITECTURE.md) - 架构设计文档
+
+### 🔧 实施指南
+- [IMPLEMENTATION_GUIDE.md](./IMPLEMENTATION_GUIDE.md) - 核心功能实施指南
+- [DYNAMIC_ROUTING.md](./DYNAMIC_ROUTING.md) - 动态路由实现说明
+- [ROUTING_IMPLEMENTATION.md](./ROUTING_IMPLEMENTATION.md) - 路由实施总结
+- [QUICK_REFERENCE.md](./QUICK_REFERENCE.md) - 快速参考
+
+### 🎨 UI和设计
+- [UI_OPTIMIZATION_SUMMARY.md](./UI_OPTIMIZATION_SUMMARY.md) - UI优化总结
+- [SEMANTIC_HTML_GUIDE.md](./SEMANTIC_HTML_GUIDE.md) - 语义HTML指南
+- [ARTICLE_LAYOUT_QUICK_REF.md](./ARTICLE_LAYOUT_QUICK_REF.md) - 文章布局快速参考
+
+### 🔍 SEO优化
+- [SEO_URL_STRATEGY.md](./SEO_URL_STRATEGY.md) - SEO URL策略
+- [URL_IMPLEMENTATION.md](./URL_IMPLEMENTATION.md) - URL实施指南
+- [SEO_METADATA_STRATEGY.md](./SEO_METADATA_STRATEGY.md) - SEO元数据策略
+- [SEO_METADATA_QUICK_REF.md](./SEO_METADATA_QUICK_REF.md) - SEO元数据快速参考
+
+### ⚡ 性能优化
+- [CORE_WEB_VITALS_OPTIMIZATION.md](./CORE_WEB_VITALS_OPTIMIZATION.md) - Core Web Vitals优化
+- [CORE_WEB_VITALS_QUICK_REF.md](./CORE_WEB_VITALS_QUICK_REF.md) - CWV快速参考
+- [CLS_OPTIMIZATION_GUIDE.md](./CLS_OPTIMIZATION_GUIDE.md) - CLS优化指南
+- [PERFORMANCE_OPTIMIZATION_SUMMARY.md](./PERFORMANCE_OPTIMIZATION_SUMMARY.md) - 性能优化总结
+- [PERFORMANCE_IMPACT_ANALYSIS.md](./PERFORMANCE_IMPACT_ANALYSIS.md) - 性能影响分析
+
+### 💰 AdSense集成
+- [ADSENSE_INTEGRATION_GUIDE.md](./ADSENSE_INTEGRATION_GUIDE.md) - AdSense集成指南
+- [ADSENSE_LAYOUT_GUIDE.md](./ADSENSE_LAYOUT_GUIDE.md) - AdSense布局指南
+- [ADSENSE_PREPARATION_SUMMARY.md](./ADSENSE_PREPARATION_SUMMARY.md) - AdSense准备总结
+
+### 📝 内容处理
+- [MARKDOWN_RENDERING_STRATEGY.md](./MARKDOWN_RENDERING_STRATEGY.md) - Markdown渲染策略
+- [MARKDOWN_SECURITY_QUICK_REF.md](./MARKDOWN_SECURITY_QUICK_REF.md) - Markdown安全快速参考
+
+### 📊 项目状态
+- [PROJECT_STATUS.md](./PROJECT_STATUS.md) - 项目状态检查
+- [CODE_REVIEW_REPORT.md](./CODE_REVIEW_REPORT.md) - 代码审查报告
+- [CAPACITY_ANALYSIS.md](./CAPACITY_ANALYSIS.md) - 容量分析
+- [CATEGORIES_UPDATE.md](./CATEGORIES_UPDATE.md) - 分类更新说明
+
+### ⚙️ 配置
+- [CONFIG.md](./CONFIG.md) - 配置文件说明
+
+## 📂 文档分类
+
+### 按用途分类
+
+**开发指南**：
+- QUICKSTART.md
+- SETUP.md
+- IMPLEMENTATION_GUIDE.md
+- DYNAMIC_ROUTING.md
+
+**参考文档**：
+- QUICK_REFERENCE.md
+- ARTICLE_LAYOUT_QUICK_REF.md
+- SEO_METADATA_QUICK_REF.md
+- CORE_WEB_VITALS_QUICK_REF.md
+- MARKDOWN_SECURITY_QUICK_REF.md
+
+**策略文档**：
+- SEO_URL_STRATEGY.md
+- SEO_METADATA_STRATEGY.md
+- MARKDOWN_RENDERING_STRATEGY.md
+
+**优化指南**：
+- CORE_WEB_VITALS_OPTIMIZATION.md
+- CLS_OPTIMIZATION_GUIDE.md
+- UI_OPTIMIZATION_SUMMARY.md
+
+**集成指南**：
+- ADSENSE_INTEGRATION_GUIDE.md
+- ADSENSE_LAYOUT_GUIDE.md
+
+**分析报告**：
+- CODE_REVIEW_REPORT.md
+- CAPACITY_ANALYSIS.md
+- PERFORMANCE_IMPACT_ANALYSIS.md
+
+## 🔍 快速查找
+
+### 我想...
+
+**开始使用项目**：
+→ [QUICKSTART.md](./QUICKSTART.md) 或 [SETUP.md](../SETUP.md)
+
+**了解项目结构**：
+→ [PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md)
+
+**实施新功能**：
+→ [IMPLEMENTATION_GUIDE.md](./IMPLEMENTATION_GUIDE.md)
+
+**优化性能**：
+→ [CORE_WEB_VITALS_OPTIMIZATION.md](./CORE_WEB_VITALS_OPTIMIZATION.md)
+
+**集成AdSense**：
+→ [ADSENSE_INTEGRATION_GUIDE.md](./ADSENSE_INTEGRATION_GUIDE.md)
+
+**查看项目状态**：
+→ [PROJECT_STATUS.md](./PROJECT_STATUS.md)
+
+**了解容量限制**：
+→ [CAPACITY_ANALYSIS.md](./CAPACITY_ANALYSIS.md)
+
+## 📝 文档维护
+
+所有文档都保存在 `docs/` 目录中，根目录只保留：
+- `README.md` - 项目主文档
+- `SETUP.md` - 快速设置指南（常用）
+
+其他所有技术文档都在 `docs/` 目录中，便于管理和查找。
+
