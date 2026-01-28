@@ -1,154 +1,297 @@
 import Container from '@/components/layout/container'
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata'
+import Link from 'next/link'
 
 export const metadata = generateSEOMetadata({
   title: 'About Us',
-  description: 'We help everyday users understand and fix issues with modern AI tools, software, and digital services.',
+  description: 'Learn about Tools Guide Hub - your trusted source for AI tools, software guides, and free interactive calculators. We help everyday users understand modern technology.',
   path: '/about',
 })
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <Container className="py-16 md:py-24">
-        {/* Hero Section */}
-        <div className="text-center mb-16 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
-            About Tools Guide Hub
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-800 leading-relaxed mb-8">
-            We help everyday users understand and fix issues with modern AI tools, software, and digital services.
-          </p>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-primary-600 to-accent-600 text-white py-20 md:py-28 border-b-4 border-primary-700">
+        <Container>
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Icon */}
+            <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-white/10 backdrop-blur-sm mb-8 shadow-xl border border-white/20">
+              <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
 
-        {/* Main Content */}
-        <div className="max-w-4xl mx-auto">
-          <div className="prose prose-lg max-w-none 
-                         prose-headings:font-bold prose-headings:text-gray-900
-                         prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-200 prose-h2:pb-3 prose-h2:text-gray-900
-                         prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-gray-900
-                         prose-p:text-gray-800 prose-p:leading-relaxed prose-p:text-base
-                         prose-a:text-primary-600 prose-a:no-underline prose-a:font-medium
-                         hover:prose-a:text-primary-700 hover:prose-a:underline
-                         prose-strong:text-gray-900 prose-strong:font-semibold
-                         prose-ul:text-gray-800 prose-li:my-3 prose-li:leading-relaxed
-                         prose-blockquote:border-l-4 prose-blockquote:border-primary-400 
-                         prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:bg-gray-50 prose-blockquote:text-gray-800 prose-blockquote:py-2 prose-blockquote:rounded-r-lg">
-            
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-gray-900">Our Mission</h2>
-              <p className="text-lg text-gray-800 leading-relaxed mb-6">
-                At Tools Guide Hub, we believe that technology should be accessible to everyone. 
-                Our mission is to empower everyday users by providing clear, comprehensive guides 
-                and solutions for the modern digital world.
-              </p>
-              <p className="text-lg text-gray-800 leading-relaxed">
-                We help everyday users understand and fix issues with modern AI tools, software, 
-                and digital services. Whether you're troubleshooting a problem, learning how to 
-                use a new tool, or managing your accounts and subscriptions, we're here to help.
-              </p>
-            </section>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              About Tools Guide Hub
+            </h1>
+            <p className="text-xl md:text-2xl text-primary-50 leading-relaxed max-w-3xl mx-auto">
+              Empowering everyday users with knowledge, guides, and free tools for the modern digital world
+            </p>
+          </div>
+        </Container>
+      </div>
 
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-gray-900">What We Do</h2>
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="p-6 bg-white border-2 border-gray-100 rounded-xl hover:border-primary-200 transition-all card-hover">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-bold text-xl mb-4">
+      {/* Main Content */}
+      <Container className="py-16">
+        <div className="max-w-6xl mx-auto">
+          {/* Mission Section */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Our Mission
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-200 p-8 md:p-12">
+                <div className="prose prose-lg max-w-none">
+                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                    At Tools Guide Hub, we believe that <strong>technology should be accessible to everyone</strong>.
+                    Our mission is to empower everyday users by providing clear, comprehensive guides
+                    and solutions for the modern digital world.
+                  </p>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Whether you're troubleshooting a problem, learning how to use a new AI tool,
+                    or trying to understand how subscription services work, we're here to help you
+                    navigate the complexity with confidence.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl p-6 text-white shadow-xl">
+                  <div className="text-4xl font-bold mb-2">500+</div>
+                  <div className="text-blue-100">Helpful Guides</div>
+                </div>
+                <div className="bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl p-6 text-white shadow-xl">
+                  <div className="text-4xl font-bold mb-2">3</div>
+                  <div className="text-purple-100">Free Tools</div>
+                </div>
+                <div className="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl p-6 text-white shadow-xl">
+                  <div className="text-4xl font-bold mb-2">24/7</div>
+                  <div className="text-emerald-100">Available</div>
+                </div>
+                <div className="bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl p-6 text-white shadow-xl">
+                  <div className="text-4xl font-bold mb-2">100%</div>
+                  <div className="text-amber-100">Free Access</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* What We Do Section */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                What We Do
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Card 1 */}
+              <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 group">
+                <div className="bg-gradient-to-r from-blue-500 to-indigo-600 p-6 text-white">
+                  <div className="w-14 h-14 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
                     🤖
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">AI Tools & Platforms</h3>
-                  <p className="text-gray-700">
+                  <h3 className="text-xl font-bold">AI Tools & Platforms</h3>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-600 leading-relaxed">
                     Comprehensive guides for understanding and using AI tools, platforms, and artificial intelligence solutions.
                   </p>
                 </div>
+              </div>
 
-                <div className="p-6 bg-white border-2 border-gray-100 rounded-xl hover:border-primary-200 transition-all card-hover">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-bold text-xl mb-4">
+              {/* Card 2 */}
+              <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 group">
+                <div className="bg-gradient-to-r from-purple-500 to-pink-600 p-6 text-white">
+                  <div className="w-14 h-14 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
                     🔧
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">Software & SaaS Issues</h3>
-                  <p className="text-gray-700">
+                  <h3 className="text-xl font-bold">Software & SaaS</h3>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-600 leading-relaxed">
                     Solutions and guides for common software and SaaS platform issues, errors, and troubleshooting.
                   </p>
                 </div>
+              </div>
 
-                <div className="p-6 bg-white border-2 border-gray-100 rounded-xl hover:border-primary-200 transition-all card-hover">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-bold text-xl mb-4">
-                    👤
+              {/* Card 3 */}
+              <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 group">
+                <div className="bg-gradient-to-r from-emerald-500 to-teal-600 p-6 text-white">
+                  <div className="w-14 h-14 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
+                    🛠️
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">Accounts & Subscriptions</h3>
-                  <p className="text-gray-700">
-                    Helpful guides for managing accounts, subscriptions, billing, and account-related issues.
+                  <h3 className="text-xl font-bold">Free Tools</h3>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-600 leading-relaxed">
+                    Interactive calculators and generators to help you make better decisions about AI and SaaS investments.
                   </p>
                 </div>
+              </div>
 
-                <div className="p-6 bg-white border-2 border-gray-100 rounded-xl hover:border-primary-200 transition-all card-hover">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-bold text-xl mb-4">
+              {/* Card 4 */}
+              <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 group">
+                <div className="bg-gradient-to-r from-amber-500 to-orange-600 p-6 text-white">
+                  <div className="w-14 h-14 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">
                     💡
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">How Things Work</h3>
-                  <p className="text-gray-700">
+                  <h3 className="text-xl font-bold">How Things Work</h3>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-600 leading-relaxed">
                     Explanatory guides and tutorials explaining how various technologies, tools, and systems work.
                   </p>
                 </div>
               </div>
-            </section>
+            </div>
+          </div>
 
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-gray-900">Our Approach</h2>
-              <ul className="space-y-4 text-gray-800">
-                <li className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-primary-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span><strong>Clear & Simple:</strong> We break down complex topics into easy-to-understand guides.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-primary-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span><strong>Step-by-Step:</strong> Our guides provide detailed, actionable instructions.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-primary-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span><strong>Up-to-Date:</strong> We regularly update our content to reflect the latest tools and best practices.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-primary-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span><strong>User-Focused:</strong> Every guide is written with the everyday user in mind.</span>
-                </li>
-              </ul>
-            </section>
+          {/* Our Approach Section */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Our Approach
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full"></div>
+            </div>
 
-            <section className="mb-12 bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-200">
-              <h2 className="text-3xl font-bold mb-6 text-gray-900">Get Started</h2>
-              <p className="text-lg text-gray-800 leading-relaxed mb-6">
-                Ready to solve your tech problems or learn something new? Browse our categories 
-                to find the guide you need, or use our search to find specific solutions.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <a
-                  href="/ai-tools-platforms"
-                  className="px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-all shadow-medium hover:shadow-large transform hover:-translate-y-1"
-                >
-                  Explore AI Tools
-                </a>
-                <a
-                  href="/troubleshooting-guides"
-                  className="px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-all"
-                >
-                  Find Solutions
-                </a>
+            <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-200 p-8 md:p-12">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Clear & Simple</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      We break down complex topics into easy-to-understand guides that anyone can follow.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-500 to-accent-600 flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Step-by-Step</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Our guides provide detailed, actionable instructions that get you results.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500 to-accent-600 flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Up-to-Date</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      We regularly update our content to reflect the latest tools and best practices.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-500 to-primary-600 flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">User-Focused</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Every guide is written with the everyday user in mind, not tech experts.
+                    </p>
+                  </div>
+                </div>
               </div>
-            </section>
+            </div>
+          </div>
+
+          {/* Values Section */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Our Values
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border-2 border-blue-200">
+                <div className="text-4xl mb-4">🎯</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Accessibility</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Technology should be accessible to everyone, regardless of their technical background.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-2 border-purple-200">
+                <div className="text-4xl mb-4">✨</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Quality</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  We're committed to creating high-quality, accurate, and helpful content.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 border-2 border-emerald-200">
+                <div className="text-4xl mb-4">🤝</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Community</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  We listen to our community and create content based on real user needs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="bg-gradient-to-r from-primary-600 to-accent-600 rounded-2xl p-8 md:p-12 text-white shadow-2xl">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-primary-50 mb-8 leading-relaxed">
+                Explore our comprehensive guides or try our free interactive tools
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/tools"
+                  className="px-8 py-4 bg-white text-primary-600 rounded-xl font-semibold hover:shadow-xl transition-all hover:-translate-y-1"
+                >
+                  Try Our Free Tools
+                </Link>
+                <Link
+                  href="/ai-tools-platforms"
+                  className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-xl font-semibold hover:bg-white/20 transition-all"
+                >
+                  Browse AI Guides
+                </Link>
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-xl font-semibold hover:bg-white/20 transition-all"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </Container>
     </div>
   )
 }
-

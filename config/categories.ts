@@ -15,6 +15,13 @@ export interface Category {
 
 export const categories: Category[] = [
   {
+    slug: 'tools',
+    name: 'Interactive Tools',
+    description: 'Free online tools and calculators for AI, SaaS, and productivity - no signup required',
+    order: 0,
+    featured: true,
+  },
+  {
     slug: 'ai-tools-platforms',
     name: 'AI Tools & Platforms',
     description: 'Comprehensive guides, reviews, and tutorials for AI tools, platforms, and artificial intelligence solutions',

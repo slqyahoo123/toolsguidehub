@@ -13,6 +13,10 @@ SEO-optimized content website built with Next.js App Router, designed for scalab
 - ✅ **Clean URLs** (`/[category]/[slug]`)
 - ✅ **TypeScript** for type safety
 - ✅ **Tailwind CSS** for styling
+- ✅ **Interactive Tools** - Free online calculators and generators
+  - 🧮 AI Token Cost Calculator
+  - ✍️ Prompt Generator
+  - 📈 SaaS ROI Calculator
 
 ## Project Structure
 
