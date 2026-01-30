@@ -31,11 +31,22 @@ const tools: Tool[] = [
         )
     },
     {
+        title: 'AI Text Humanizer',
+        description: 'Check if your text sounds like AI and get tips to make it more human and bypass detection',
+        href: '/tools/ai-text-humanizer',
+        color: 'from-indigo-500 to-purple-600',
+        badge: 'New',
+        icon: (
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+        )
+    },
+    {
         title: 'Prompt Generator',
         description: 'Generate optimized AI prompts for ChatGPT, Claude, and other language models',
         href: '/tools/prompt-generator',
         color: 'from-purple-500 to-pink-600',
-        badge: 'New',
         icon: (
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
@@ -43,10 +54,34 @@ const tools: Tool[] = [
         )
     },
     {
+        title: 'YouTube Script Generator',
+        description: 'Create professional video scripts with proven templates for tutorials, reviews, and vlogs',
+        href: '/tools/youtube-script-generator',
+        color: 'from-red-500 to-pink-600',
+        badge: 'New',
+        icon: (
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+        )
+    },
+    {
+        title: 'Meta Tag Generator',
+        description: 'Generate perfect HTML meta tags, Open Graph tags, and Twitter Cards for better SEO',
+        href: '/tools/meta-tag-generator',
+        color: 'from-emerald-500 to-teal-600',
+        badge: 'New',
+        icon: (
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
+            </svg>
+        )
+    },
+    {
         title: 'SaaS ROI Calculator',
         description: 'Calculate return on investment for SaaS tools and subscription services',
         href: '/tools/saas-roi-calculator',
-        color: 'from-emerald-500 to-teal-600',
+        color: 'from-amber-500 to-orange-600',
         icon: (
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
