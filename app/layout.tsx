@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/next'
 import { siteConfig } from '@/config/site'
 import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
@@ -65,6 +66,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <Analytics />
         {/* 
           AdSense脚本将在获得批准后添加
           注意：AdSense脚本应异步加载，不影响页面渲染
