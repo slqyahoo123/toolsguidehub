@@ -15,7 +15,10 @@ SEO-optimized content website built with Next.js App Router, designed for scalab
 - ✅ **Tailwind CSS** for styling
 - ✅ **Interactive Tools** - Free online calculators and generators
   - 🧮 AI Token Cost Calculator
+  - 🤖 AI Text Humanizer (New)
   - ✍️ Prompt Generator
+  - 📺 YouTube Script Generator (New)
+  - 🔍 Meta Tag Generator (New)
   - 📈 SaaS ROI Calculator
 
 ## Project Structure
