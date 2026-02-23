@@ -223,6 +223,84 @@ export default function AboutPage() {
             </div>
           </div>
 
+          {/* Editorial Standards Section */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Editorial Standards
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-200 p-8 md:p-12">
+              <div className="prose prose-lg max-w-none text-gray-700">
+                <p>
+                  At Tools Guide Hub, we maintain strict editorial standards to ensure our readers receive
+                  the most accurate and helpful information. Every guide and tool calculation on our
+                  site undergoes a rigorous review process:
+                </p>
+                <div className="grid md:grid-cols-2 gap-8 mt-8">
+                  <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                    <h4 className="font-bold text-gray-900 mb-2">Accuracy First</h4>
+                    <p className="text-sm">We fact-check every technical instruction and verify calculation formulas against official documentation from providers like OpenAI, Anthropic, and Google.</p>
+                  </div>
+                  <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                    <h4 className="font-bold text-gray-900 mb-2">Regular Updates</h4>
+                    <p className="text-sm">The digital world moves fast. We review our primary guides monthly to ensure they reflect the latest software updates and pricing changes.</p>
+                  </div>
+                  <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                    <h4 className="font-bold text-gray-900 mb-2">Objectivity</h4>
+                    <p className="text-sm">Our tool comparisons and software reviews are unbiased. We highlight both the pros and cons to help you make the best decision for your specific needs.</p>
+                  </div>
+                  <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                    <h4 className="font-bold text-gray-900 mb-2">User Experience</h4>
+                    <p className="text-sm">We prioritize clarity and simplicity. If a guide is too complex, we rewrite it until it's accessible to an everyday user.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Expert Team Section */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Meet the Experts
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-200 p-8 flex flex-col md:flex-row gap-6 items-center md:items-start text-center md:text-left transition-all hover:border-primary-300">
+                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex-shrink-0 shadow-lg border-4 border-white flex items-center justify-center text-4xl">
+                  👨‍💻
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">Alex Chen</h3>
+                  <p className="text-primary-600 font-semibold mb-3">Lead AI Strategist</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    With over 10 years of experience in software engineering and 3 years specializing in LLM implementations,
+                    Alex ensures our technical guides are both deep and accurate.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-200 p-8 flex flex-col md:flex-row gap-6 items-center md:items-start text-center md:text-left transition-all hover:border-accent-300">
+                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex-shrink-0 shadow-lg border-4 border-white flex items-center justify-center text-4xl">
+                  👩‍💼
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">Sarah Miller</h3>
+                  <p className="text-accent-600 font-semibold mb-3">SaaS Optimization Expert</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Sarah focuses on software economics and productivity. She has helped dozens of startups optimize
+                    their SaaS stack to reduce waste and improve ROI.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Values Section */}
           <div className="mb-20">
             <div className="text-center mb-12">

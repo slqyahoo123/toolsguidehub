@@ -42,6 +42,10 @@ export const footerNavigation = {
       label: 'Terms of Service',
       href: '/terms',
     },
+    {
+      label: 'Cookie Policy',
+      href: '/cookie-policy',
+    },
   ],
 }
 

@@ -146,6 +146,26 @@ export default function ContactPage() {
                 </p>
               </div>
             </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mt-12 pt-12 border-t border-gray-100">
+              <div>
+                <h4 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                  <span className="text-xl">⏰</span> Office Hours
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Monday – Friday: 9:00 AM – 6:00 PM (UTC+8)<br />
+                  Saturday – Sunday: Limited support
+                </p>
+              </div>
+              <div>
+                <h4 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                  <span className="text-xl">📢</span> Media & Partnerships
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Interested in featuring our tools or a partnership? Contact our media team at <span className="font-semibold">media@toolsguidehub.com</span>
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* CTA Section */}

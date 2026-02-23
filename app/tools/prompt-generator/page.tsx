@@ -108,6 +108,68 @@ export default function PromptGeneratorPage() {
                                 to a proven prompt often work better than starting from scratch each time.
                             </p>
                         </div>
+
+                        <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
+                            Advanced Prompting Frameworks
+                        </h3>
+                        <p>
+                            To get elite results, professional prompt engineers use structured frameworks. Our generator
+                            integrates these behind the scenes. Here are the three most powerful frameworks we use:
+                        </p>
+
+                        <div className="grid md:grid-cols-2 gap-6 mt-8">
+                            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
+                                <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                                    <span className="bg-primary-100 text-primary-700 w-8 h-8 rounded-full flex items-center justify-center text-xs">A</span>
+                                    CO-STAR Framework
+                                </h4>
+                                <ul className="text-sm space-y-2 text-gray-600">
+                                    <li><strong>Context:</strong> Background information</li>
+                                    <li><strong>Objective:</strong> Specific goal</li>
+                                    <li><strong>Style:</strong> Desired writing style</li>
+                                    <li><strong>Tone:</strong> Emotional quality</li>
+                                    <li><strong>Audience:</strong> Who is it for?</li>
+                                    <li><strong>Response:</strong> Output format</li>
+                                </ul>
+                            </div>
+
+                            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
+                                <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                                    <span className="bg-accent-100 text-accent-700 w-8 h-8 rounded-full flex items-center justify-center text-xs">B</span>
+                                    RTF Framework
+                                </h4>
+                                <ul className="text-sm space-y-2 text-gray-600">
+                                    <li><strong>Role:</strong> Act as [Expert]</li>
+                                    <li><strong>Task:</strong> Complete [Action]</li>
+                                    <li><strong>Format:</strong> In [Style/Structure]</li>
+                                    <li className="pt-2 italic border-t border-gray-200 mt-2">Best for: Quick, direct tasks and specific data formatting.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
+                            Why Methodology Matters
+                        </h3>
+                        <p>
+                            Most users get "low-value" responses from AI because they use "low-value" prompts. By using a
+                            structured generator, you ensure that the AI's internal "attention mechanism" is focused
+                            on the right variables.
+                        </p>
+                        <p>
+                            Specifically, providing a <strong>Persona</strong> (Role) reduces the search space for the LLM,
+                            allowing it to pull from more relevant training data. Defining the <strong>Constraint</strong>
+                            prevents common hallucinations and ensures the response fits your technical requirements.
+                        </p>
+
+                        <div className="bg-emerald-50 border-2 border-emerald-100 p-8 rounded-2xl mt-8">
+                            <h4 className="font-bold text-emerald-900 mb-4">Our Commitment to Value</h4>
+                            <p className="text-emerald-800 text-sm leading-relaxed">
+                                Tools Guide Hub is dedicated to providing unique, high-value AI solutions. Unlike generic
+                                prompt lists, our generator is built on the latest cognitive science principles of how
+                                Transformer models process tokens. We regularly update our internal templates to reflect
+                                the changing "latent space" of newest models like Claude 4 and GPT-5.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
